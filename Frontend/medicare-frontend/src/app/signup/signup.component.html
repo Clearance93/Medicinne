@@ -1,0 +1,126 @@
+<!-- <div>
+    <h2>Account Create</h2>
+    <form [formGroup]="loginRef" (ngSubmit)="signUp()">
+        <label>Name</label>
+        <input type="text" formControlName="name"/><br/>
+        <label>EmailId</label>
+        <input type="email" formControlName="emailid"/><br/>
+        <label>Home Address</label>
+        <input type="text" formControlName="home_address"/><br/>
+        <label>Contact</label>
+        <input type="number" formControlName="contact"/><br/>
+        <label>Gender</label>
+        <input type="text" formControlName="gender"/><br/>
+        <label>Password</label>
+        <input type="password" formControlName="password"/><br/>
+        <label>TypeOfUser</label>
+        <input type="radio" name="typeOfUser" value="admin" formControlName="typeOfUser"/>Admin
+        <input type="radio" name="typeOfUser" value ="user" formControlName="typeOfUser"/>User
+        <br/>
+        <input type="submit" value="SignUp"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <span style="color:red">{{errorMsg}}</span>
+    <br/>
+    <a routerLink="/login">Login</a>
+</div> -->
+
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+  
+                  <form class="mx-1 mx-md-4"  [formGroup]="loginRef" (ngSubmit)="signUp()">
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" formControlName="name" class="form-control" />
+                        <label class="form-label" for="form3Example1c">Your Name</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="form3Example3c" formControlName="emailid" class="form-control" />
+                        <label class="form-label" for="form3Example3c">Your Email</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="form3Example1c" formControlName="home_address" class="form-control" />
+                          <label class="form-label" for="form3Example1c">Home Address</label>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="number" id="form3Example1c" formControlName="contact" class="form-control" />
+                          <label class="form-label" for="form3Example1c">Contact Number</label>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="form3Example1c" formControlName="gender" class="form-control" />
+                          <label class="form-label" for="form3Example1c">Gender</label>
+                        </div>
+                      </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" formControlName="password" class="form-control" />
+                        <label class="form-label" for="form3Example4c">Password</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <input type="radio" name="typeOfUser" value="admin" formControlName="typeOfUser"/>Admin <br>
+                            <input type="radio" name="typeOfUser" value ="user" formControlName="typeOfUser"/>User
+                          <!-- <label class="form-label" for="form3Example1c">Type Of User</label> -->
+                        </div>
+                      </div>
+  
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                      <label class="form-check-label" for="form2Example3">
+                        I agree all statements in <a href="#!">Terms of service</a>
+                      </label>
+                    </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                    </div>
+  
+                  </form>
+                  <span style="color:red">{{errorMsg}}</span>
+                  <br/>
+                  <a routerLink="/login" class="btn btn-outline-primary">Login</a>
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
